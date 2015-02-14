@@ -6,9 +6,13 @@
 //  Copyright (c) 2015 Dominic Ong. All rights reserved.
 //
 
+//ella lee
+
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var hi : Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
