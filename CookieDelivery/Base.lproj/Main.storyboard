@@ -115,18 +115,6 @@
                             <constraint firstItem="lAA-gF-JIH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="61" id="RiW-zo-8WG"/>
                             <constraint firstItem="crG-gd-44g" firstAttribute="top" secondItem="Kh8-rc-H3D" secondAttribute="bottom" constant="30" id="ThS-KU-3Ci"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="5bo-7n-0CY"/>
-                                <exclude reference="RJd-F2-2lY"/>
-                                <exclude reference="DbO-eG-1CW"/>
-                                <exclude reference="ThS-KU-3Ci"/>
-                                <exclude reference="HOO-YV-1qR"/>
-                                <exclude reference="RiW-zo-8WG"/>
-                                <exclude reference="9d0-F3-87R"/>
-                                <exclude reference="Eqd-uK-OMQ"/>
-                            </mask>
-                        </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="crG-gd-44g"/>
@@ -299,22 +287,6 @@
                             <constraint firstAttribute="centerX" secondItem="G0L-li-xXl" secondAttribute="centerX" id="qMz-Le-3eh"/>
                             <constraint firstAttribute="centerX" secondItem="wu8-rF-KJn" secondAttribute="centerX" id="uQ8-Wg-RKh"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="qMz-Le-3eh"/>
-                                <exclude reference="9Aa-cC-lLd"/>
-                                <exclude reference="Ezu-fF-Spz"/>
-                                <exclude reference="egL-cI-Ffo"/>
-                                <exclude reference="btx-hR-Eae"/>
-                                <exclude reference="hNw-kI-5nr"/>
-                                <exclude reference="G4Y-h8-xH9"/>
-                                <exclude reference="ltm-cI-xtt"/>
-                                <exclude reference="EoM-Of-LZk"/>
-                                <exclude reference="uQ8-Wg-RKh"/>
-                                <exclude reference="Dsp-HV-7sp"/>
-                                <exclude reference="Qtm-Nh-PYV"/>
-                            </mask>
-                        </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="G0L-li-xXl"/>
