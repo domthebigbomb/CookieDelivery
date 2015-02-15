@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -41,7 +40,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="login:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NfN-fb-6mb"/>
-                                    <action selector="loginButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="k9s-QN-Fsu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtv-pM-pPb">
@@ -146,9 +144,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <connections>
-                        <outlet property="login" destination="lAA-gF-JIH" id="OQB-SB-acD"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -306,8 +301,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Dsp-HV-7sp"/>
-                                <exclude reference="Qtm-Nh-PYV"/>
+                                <exclude reference="qMz-Le-3eh"/>
+                                <exclude reference="9Aa-cC-lLd"/>
                                 <exclude reference="Ezu-fF-Spz"/>
                                 <exclude reference="egL-cI-Ffo"/>
                                 <exclude reference="btx-hR-Eae"/>
@@ -316,8 +311,8 @@
                                 <exclude reference="ltm-cI-xtt"/>
                                 <exclude reference="EoM-Of-LZk"/>
                                 <exclude reference="uQ8-Wg-RKh"/>
-                                <exclude reference="qMz-Le-3eh"/>
-                                <exclude reference="9Aa-cC-lLd"/>
+                                <exclude reference="Dsp-HV-7sp"/>
+                                <exclude reference="Qtm-Nh-PYV"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -330,8 +325,8 @@
                                 <include reference="PP7-bK-jpr"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Dsp-HV-7sp"/>
-                                <include reference="Qtm-Nh-PYV"/>
+                                <include reference="qMz-Le-3eh"/>
+                                <include reference="9Aa-cC-lLd"/>
                                 <include reference="Ezu-fF-Spz"/>
                                 <include reference="egL-cI-Ffo"/>
                                 <include reference="btx-hR-Eae"/>
@@ -340,8 +335,8 @@
                                 <include reference="ltm-cI-xtt"/>
                                 <include reference="EoM-Of-LZk"/>
                                 <include reference="uQ8-Wg-RKh"/>
-                                <include reference="qMz-Le-3eh"/>
-                                <include reference="9Aa-cC-lLd"/>
+                                <include reference="Dsp-HV-7sp"/>
+                                <include reference="Qtm-Nh-PYV"/>
                             </mask>
                         </variation>
                     </view>
