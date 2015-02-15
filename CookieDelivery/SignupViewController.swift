@@ -28,24 +28,6 @@ class SignupViewController : ViewController, UITextFieldDelegate {
         return true
     }
     
-    //if login is tapped..
-    @IBAction func login(sender: UIButton) {
-        PFUser.logInWithUsernameInBackground(self.usernameField.text, password:self.passwordField.text) {
-            (user: PFUser!, error: NSError!) -> Void in
-            if user != nil {
-                // Do stuff after successful login. ^ edit this part
-            } else {
-                var alertView:UIAlertView = UIAlertView()
-                alertView.title = "Sign in Failed"
-                alertView.message = "Please re-enter username and password"
-                alertView.delegate = self
-                alertView.addButtonWithTitle("OK")
-                alertView.show()
-            }
-        }
-        
-    }
-    
     
     @IBAction func attemptToRegister(sender: AnyObject) {
         if let username = usernameField.text {
