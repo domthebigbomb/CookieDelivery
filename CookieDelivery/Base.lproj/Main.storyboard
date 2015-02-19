@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -39,7 +40,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="login:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NfN-fb-6mb"/>
+                                    <action selector="loginButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PWc-wK-CFM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtv-pM-pPb">
@@ -132,10 +133,95 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="userName" destination="Kh8-rc-H3D" id="2O0-4z-rub"/>
+                        <outlet property="userPassword" destination="crG-gd-44g" id="FDD-bb-PQf"/>
+                        <segue destination="CFA-Kv-1oY" kind="presentation" identifier="showApp" id="vRu-S4-6oH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="177" y="372"/>
+            <point key="canvasLocation" x="181.5" y="352.5"/>
+        </scene>
+        <!--Newsfeed View Controller-->
+        <scene sceneID="Wi2-iN-8lE">
+            <objects>
+                <viewController id="CFA-Kv-1oY" customClass="NewsfeedViewController" customModule="CookieDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gpl-Lf-Jzr"/>
+                        <viewControllerLayoutGuide type="bottom" id="ULr-Ch-awU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7f2-Sa-Hk3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="uD7-dp-kan">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="requestCell" id="Amc-4Z-OgU">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Amc-4Z-OgU" id="zCc-Yv-EYv">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2IK-Ti-Ptg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="requestCell" id="i05-KG-k6D">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i05-KG-k6D" id="U1N-O9-JLg">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ULr-Ch-awU" firstAttribute="top" secondItem="2IK-Ti-Ptg" secondAttribute="bottom" id="3oL-kU-cPM"/>
+                            <constraint firstItem="2IK-Ti-Ptg" firstAttribute="top" secondItem="7f2-Sa-Hk3" secondAttribute="topMargin" id="BwJ-5z-Neg"/>
+                            <constraint firstItem="ULr-Ch-awU" firstAttribute="top" secondItem="uD7-dp-kan" secondAttribute="bottom" id="EK1-30-cVp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2IK-Ti-Ptg" secondAttribute="trailing" constant="-16" id="Gho-a4-LwS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uD7-dp-kan" secondAttribute="trailing" constant="-16" id="MbA-Ys-HsX"/>
+                            <constraint firstItem="2IK-Ti-Ptg" firstAttribute="leading" secondItem="7f2-Sa-Hk3" secondAttribute="leadingMargin" constant="-16" id="VAi-7M-tzV"/>
+                            <constraint firstItem="uD7-dp-kan" firstAttribute="top" secondItem="7f2-Sa-Hk3" secondAttribute="topMargin" id="omc-9E-xOl"/>
+                            <constraint firstItem="uD7-dp-kan" firstAttribute="leading" secondItem="7f2-Sa-Hk3" secondAttribute="leadingMargin" constant="-16" id="z0M-B2-wcp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="uD7-dp-kan"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="EK1-30-cVp"/>
+                                <exclude reference="MbA-Ys-HsX"/>
+                                <exclude reference="omc-9E-xOl"/>
+                                <exclude reference="z0M-B2-wcp"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="uD7-dp-kan"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="EK1-30-cVp"/>
+                                <include reference="MbA-Ys-HsX"/>
+                                <include reference="omc-9E-xOl"/>
+                                <include reference="z0M-B2-wcp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="newsFeedView" destination="uD7-dp-kan" id="KhX-g2-SJx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vew-cj-IUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181.5" y="1098.75"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="l0t-gl-Bj6">

@@ -30,6 +30,7 @@
 		0BFC54281A8CF888009CC0CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BFC54271A8CF888009CC0CB /* Images.xcassets */; };
 		0BFC542B1A8CF888009CC0CB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BFC54291A8CF888009CC0CB /* LaunchScreen.xib */; };
 		0BFC54371A8CF888009CC0CB /* CookieDeliveryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFC54361A8CF888009CC0CB /* CookieDeliveryTests.swift */; };
+		F00E7F821A956F8D000E02CA /* NewsfeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00E7F811A956F8D000E02CA /* NewsfeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		0BFC54301A8CF888009CC0CB /* CookieDeliveryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookieDeliveryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BFC54351A8CF888009CC0CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BFC54361A8CF888009CC0CB /* CookieDeliveryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieDeliveryTests.swift; sourceTree = "<group>"; };
+		F00E7F811A956F8D000E02CA /* NewsfeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			children = (
 				0BFC54201A8CF888009CC0CB /* AppDelegate.swift */,
 				0BFC54221A8CF888009CC0CB /* ViewController.swift */,
+				F00E7F811A956F8D000E02CA /* NewsfeedViewController.swift */,
 				0BBAFA311A8F0F3C00CC64BC /* SignupViewController.swift */,
 				0BFC54241A8CF888009CC0CB /* Main.storyboard */,
 				0BFC54271A8CF888009CC0CB /* Images.xcassets */,
@@ -292,6 +295,7 @@
 				0BBAFA321A8F0F3C00CC64BC /* SignupViewController.swift in Sources */,
 				0BFC54231A8CF888009CC0CB /* ViewController.swift in Sources */,
 				0BFC54211A8CF888009CC0CB /* AppDelegate.swift in Sources */,
+				F00E7F821A956F8D000E02CA /* NewsfeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
