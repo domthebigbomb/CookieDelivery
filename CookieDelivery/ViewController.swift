@@ -87,7 +87,7 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showApp"{
             
-            var segDest: NewsfeedViewController = segue.destinationViewController as NewsfeedViewController
+            var segDest: NewsfeedViewController = segue.destinationViewController as! NewsfeedViewController
             segDest.currUser = userFound
             
         }
