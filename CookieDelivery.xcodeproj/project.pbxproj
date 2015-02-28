@@ -24,6 +24,7 @@
 		0BBAFA2F1A8F0CB700CC64BC /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBAFA2A1A8F0CB700CC64BC /* ParseFacebookUtils.framework */; };
 		0BBAFA301A8F0CB700CC64BC /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBAFA2B1A8F0CB700CC64BC /* ParseUI.framework */; };
 		0BBAFA321A8F0F3C00CC64BC /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBAFA311A8F0F3C00CC64BC /* SignupViewController.swift */; };
+		0BBD30101AA18DD9007A7AD7 /* AddRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBD300F1AA18DD9007A7AD7 /* AddRequestViewController.swift */; };
 		0BFC54211A8CF888009CC0CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFC54201A8CF888009CC0CB /* AppDelegate.swift */; };
 		0BFC54231A8CF888009CC0CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFC54221A8CF888009CC0CB /* ViewController.swift */; };
 		0BFC54261A8CF888009CC0CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BFC54241A8CF888009CC0CB /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		0BBAFA2A1A8F0CB700CC64BC /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = Frameworks/ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		0BBAFA2B1A8F0CB700CC64BC /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Frameworks/ParseUI.framework; sourceTree = "<group>"; };
 		0BBAFA311A8F0F3C00CC64BC /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		0BBD300F1AA18DD9007A7AD7 /* AddRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRequestViewController.swift; sourceTree = "<group>"; };
 		0BFC541B1A8CF888009CC0CB /* CookieDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookieDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BFC541F1A8CF888009CC0CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BFC54201A8CF888009CC0CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				0BFC54271A8CF888009CC0CB /* Images.xcassets */,
 				0BFC54291A8CF888009CC0CB /* LaunchScreen.xib */,
 				0BFC541E1A8CF888009CC0CB /* Supporting Files */,
+				0BBD300F1AA18DD9007A7AD7 /* AddRequestViewController.swift */,
 			);
 			path = CookieDelivery;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				0BBAFA321A8F0F3C00CC64BC /* SignupViewController.swift in Sources */,
 				0BFC54231A8CF888009CC0CB /* ViewController.swift in Sources */,
 				0BFC54211A8CF888009CC0CB /* AppDelegate.swift in Sources */,
+				0BBD30101AA18DD9007A7AD7 /* AddRequestViewController.swift in Sources */,
 				F00E7F821A956F8D000E02CA /* NewsfeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

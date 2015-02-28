@@ -17,6 +17,14 @@ class NewsfeedViewController: UIViewController, UITableViewDataSource, UITableVi
     var currUser: PFUser?
     var requests: Array<String>?
     
+    @IBAction func showProfile(sender: AnyObject) {
+        self.performSegueWithIdentifier("goToProfile", sender: self)
+    }
+    
+    @IBAction func addRequest(sender: AnyObject) {
+        self.performSegueWithIdentifier("addRequestSegue", sender: self)
+    }
+    
     override func viewDidLoad() {
         println(currUser?.description)
         requests = Array<String>()
@@ -29,7 +37,7 @@ class NewsfeedViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cellToReturn: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("requestCell") as UITableViewCell
+        var cellToReturn: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("requestCell") as! UITableViewCell
         cellToReturn.textLabel!.text = String(indexPath.row)
         
         return cellToReturn

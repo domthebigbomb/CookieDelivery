@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7515.2" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7512"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -68,7 +68,7 @@
                                     <segue destination="sQM-xS-Jzy" kind="presentation" id="zqa-3M-8te"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crG-gd-44g">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ella" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crG-gd-44g">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="178" id="sRI-Ri-i6c"/>
@@ -86,7 +86,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kh8-rc-H3D">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dom" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kh8-rc-H3D">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="178" id="t2A-Gc-385"/>
@@ -136,14 +136,14 @@
                     <connections>
                         <outlet property="userName" destination="Kh8-rc-H3D" id="2O0-4z-rub"/>
                         <outlet property="userPassword" destination="crG-gd-44g" id="FDD-bb-PQf"/>
-                        <segue destination="CFA-Kv-1oY" kind="presentation" identifier="showApp" id="vRu-S4-6oH"/>
+                        <segue destination="3ke-NN-r0a" kind="presentation" identifier="showApp" id="doS-0X-fu1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181.5" y="352.5"/>
+            <point key="canvasLocation" x="-438" y="98"/>
         </scene>
-        <!--Newsfeed View Controller-->
+        <!--Newsfeed-->
         <scene sceneID="Wi2-iN-8lE">
             <objects>
                 <viewController id="CFA-Kv-1oY" customClass="NewsfeedViewController" customModule="CookieDelivery" customModuleProvider="target" sceneMemberID="viewController">
@@ -215,13 +215,140 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Newsfeed" id="oe1-zk-Q6V">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="MVA-ua-FJO"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="kaB-nl-9YW">
+                            <connections>
+                                <action selector="addRequest:" destination="CFA-Kv-1oY" id="EWV-JO-BAu"/>
+                                <segue destination="G2Y-U6-641" kind="presentation" identifier="addRequestSegue" id="j9K-Wv-ePu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Profile" id="S4L-SB-ExB">
+                            <connections>
+                                <action selector="showProfile:" destination="CFA-Kv-1oY" id="jfh-dD-bBV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="newsFeedView" destination="uD7-dp-kan" id="KhX-g2-SJx"/>
+                        <segue destination="wA2-Mt-Ra4" kind="show" identifier="goToProfile" id="gX3-fS-txX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vew-cj-IUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181.5" y="1098.75"/>
+            <point key="canvasLocation" x="756" y="1120.5"/>
+        </scene>
+        <!--Add Request View Controller-->
+        <scene sceneID="Pg7-Tt-S6x">
+            <objects>
+                <viewController id="G2Y-U6-641" customClass="AddRequestViewController" customModule="CookieDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ut2-C1-jTO"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Vw-7F-KL7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KH0-fu-7jH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmu-fJ-GSH">
+                                <rect key="frame" x="16" y="28" width="81" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ac7-yL-quS"/>
+                                    <constraint firstAttribute="width" constant="81" id="u9v-uC-rXp"/>
+                                </constraints>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelPost:" destination="G2Y-U6-641" eventType="touchUpInside" id="CmE-he-zkY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWE-eP-qO7">
+                                <rect key="frame" x="496" y="28" width="88" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5NM-D4-Euz"/>
+                                    <constraint firstAttribute="width" constant="88" id="IwS-u9-WVI"/>
+                                </constraints>
+                                <state key="normal" title="Post">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postRequest:" destination="G2Y-U6-641" eventType="touchUpInside" id="3oo-BC-0kV"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iP8-YN-gWe">
+                                <rect key="frame" x="24" y="195" width="552" height="209"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="209" id="pTf-wz-Y1o"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LWE-eP-qO7" firstAttribute="top" secondItem="Ut2-C1-jTO" secondAttribute="bottom" constant="8" id="2Ix-Lv-MsT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iP8-YN-gWe" secondAttribute="trailing" constant="8" id="6Vb-wX-89t"/>
+                            <constraint firstItem="Hmu-fJ-GSH" firstAttribute="leading" secondItem="KH0-fu-7jH" secondAttribute="leadingMargin" id="DSu-1N-bKz"/>
+                            <constraint firstItem="Hmu-fJ-GSH" firstAttribute="top" secondItem="Ut2-C1-jTO" secondAttribute="bottom" constant="8" id="MAi-pR-Ypz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LWE-eP-qO7" secondAttribute="trailing" id="QKQ-2R-slj"/>
+                            <constraint firstItem="Hmu-fJ-GSH" firstAttribute="leading" secondItem="KH0-fu-7jH" secondAttribute="leadingMargin" constant="8" id="QKZ-Ob-CzZ"/>
+                            <constraint firstItem="iP8-YN-gWe" firstAttribute="leading" secondItem="KH0-fu-7jH" secondAttribute="leadingMargin" constant="8" id="bxY-Bu-7Rm"/>
+                            <constraint firstAttribute="centerY" secondItem="iP8-YN-gWe" secondAttribute="centerY" id="idu-PD-8hh"/>
+                            <constraint firstAttribute="centerX" secondItem="iP8-YN-gWe" secondAttribute="centerX" id="pjb-cQ-QR7"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QKZ-Ob-CzZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="requestDescription" destination="iP8-YN-gWe" id="Uee-z2-hL4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J0A-Rm-Ao3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749" y="1893"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="M0Q-Y7-fsV">
+            <objects>
+                <viewController id="wA2-Mt-Ra4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mO5-ha-P1k"/>
+                        <viewControllerLayoutGuide type="bottom" id="dye-LV-FTP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zL4-hj-kO2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="YaD-eA-whB">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="CBt-VA-j0O"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s4h-xQ-t9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1563" y="1120.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c8G-dh-kJV">
+            <objects>
+                <navigationController id="3ke-NN-r0a" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qXg-TZ-nKe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CFA-Kv-1oY" kind="relationship" relationship="rootViewController" id="ibv-T4-ClZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ujz-U4-16n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4.5" y="1124.25"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="l0t-gl-Bj6">
@@ -407,7 +534,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evh-g3-iP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904.5" y="372"/>
+            <point key="canvasLocation" x="1046" y="378"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FEs-k1-tKf">
+            <objects>
+                <viewController id="PoC-J2-h3a" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H8a-0q-8CD"/>
+                        <viewControllerLayoutGuide type="bottom" id="cz8-dW-Yc4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UkZ-pW-Qn9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H9r-Mo-yXz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>
