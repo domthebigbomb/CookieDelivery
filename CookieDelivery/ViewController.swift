@@ -48,17 +48,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(sender: AnyObject) {
-        println("before if statement")
+        
+        
         if userName.text != "" && userPassword.text != "" {
             println("after if statement")
             //Not empty do something
             PFUser.logInWithUsernameInBackground(self.userName.text, password:self.userPassword.text) {
                 (user: PFUser!, error: NSError!) -> Void in
-                println("before if statement 2")
                 if user != nil {
                     //go to login page if user isn't nil
-                    println("user isn't nil!!!!!!")
-                    self.userFound = user
+                    
+                    var parseMan = ParseManager.sharedInstance
+                    parseMan.setUserCredentials(user)
+                    
+                    println("user: " + user.description)
+                    println("user2: " + parseMan.returnUser().description)
+                    
                     self.performSegueWithIdentifier("showApp", sender: self)
                     
                 } else {

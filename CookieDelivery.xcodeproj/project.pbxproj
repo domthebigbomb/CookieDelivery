@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B6C4E7F1AA3F69900EC8029 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6C4E7E1AA3F69900EC8029 /* MapKit.framework */; };
+		0B6C4E811AA3FB1700EC8029 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C4E801AA3FB1700EC8029 /* ParseManager.swift */; };
 		0BB477D51A8D003900FC04EE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB477C81A8D000600FC04EE /* CoreLocation.framework */; };
 		0BB477D71A8D004B00FC04EE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB477D61A8D004B00FC04EE /* QuartzCore.framework */; };
 		0BB477D91A8D005700FC04EE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB477D81A8D005700FC04EE /* libz.dylib */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B6C4E7E1AA3F69900EC8029 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0B6C4E801AA3FB1700EC8029 /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
 		0BB477C81A8D000600FC04EE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0BB477D61A8D004B00FC04EE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0BB477D81A8D005700FC04EE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -91,6 +95,7 @@
 				0BB477DF1A8D007500FC04EE /* SystemConfiguration.framework in Frameworks */,
 				0BB477DD1A8D006900FC04EE /* libsqlite3.dylib in Frameworks */,
 				0BB477D91A8D005700FC04EE /* libz.dylib in Frameworks */,
+				0B6C4E7F1AA3F69900EC8029 /* MapKit.framework in Frameworks */,
 				0BBAFA301A8F0CB700CC64BC /* ParseUI.framework in Frameworks */,
 				0BB477D71A8D004B00FC04EE /* QuartzCore.framework in Frameworks */,
 				0BBAFA2E1A8F0CB700CC64BC /* ParseCrashReporting.framework in Frameworks */,
@@ -114,6 +119,7 @@
 		0BB477CA1A8D000C00FC04EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B6C4E7E1AA3F69900EC8029 /* MapKit.framework */,
 				0BB477EA1A8D00B700FC04EE /* AudioToolbox.framework */,
 				0BB477E81A8D00B200FC04EE /* CoreGraphics.framework */,
 				0BB477E61A8D00AA00FC04EE /* MobileCoreServices.framework */,
@@ -162,6 +168,7 @@
 				F00E7F811A956F8D000E02CA /* NewsfeedViewController.swift */,
 				0BBAFA311A8F0F3C00CC64BC /* SignupViewController.swift */,
 				0BBD300F1AA18DD9007A7AD7 /* AddRequestViewController.swift */,
+				0B6C4E801AA3FB1700EC8029 /* ParseManager.swift */,
 				0BFC54241A8CF888009CC0CB /* Main.storyboard */,
 				0BFC54271A8CF888009CC0CB /* Images.xcassets */,
 				0BFC54291A8CF888009CC0CB /* LaunchScreen.xib */,
@@ -244,6 +251,11 @@
 				TargetAttributes = {
 					0BFC541A1A8CF888009CC0CB = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					0BFC542F1A8CF888009CC0CB = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -296,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BBAFA321A8F0F3C00CC64BC /* SignupViewController.swift in Sources */,
+				0B6C4E811AA3FB1700EC8029 /* ParseManager.swift in Sources */,
 				0BFC54231A8CF888009CC0CB /* ViewController.swift in Sources */,
 				0BFC54211A8CF888009CC0CB /* AppDelegate.swift in Sources */,
 				0BBD30101AA18DD9007A7AD7 /* AddRequestViewController.swift in Sources */,

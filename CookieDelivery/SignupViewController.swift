@@ -40,7 +40,7 @@ class SignupViewController : ViewController, UITextFieldDelegate {
                         user.password = password
                         user.email = email
                         user.signUpInBackgroundWithBlock{
-                            (succeeded: Bool!, error: NSError!) -> Void in
+                            (succeeded: Bool, error: NSError!) -> Void in
                             if error == nil {
                                 println("Successfully signed up user")
                                 self.dismissViewControllerAnimated(true, completion: nil)
